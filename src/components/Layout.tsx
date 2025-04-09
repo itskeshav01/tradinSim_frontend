@@ -4,9 +4,9 @@ export function Layout() {
   const location = useLocation();
   
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="flex flex-col min-h-screen bg-gray-50">
       {/* Main content */}
-      <main className="container mx-auto px-4 py-6">
+      <main className="flex-1 container overflow-auto mx-auto px-4 py-6">
         <Outlet />
       </main>
       
@@ -16,7 +16,7 @@ export function Layout() {
           <NavLink to="/" active={location.pathname === "/"}>
             Home
           </NavLink>
-          <NavLink to="/stock/RELIANCE" active={location.pathname.includes("/stock")}>
+          <NavLink to="/stock/AAPL" active={location.pathname.includes("/stock")}>
             Trade
           </NavLink>
           <NavLink to="/backtest" active={location.pathname === "/backtest"}>

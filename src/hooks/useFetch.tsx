@@ -1,8 +1,7 @@
 import { useState } from "react";
 
 export default function useFetch(baseUrl) {
-  const [loading, setLoading] = useState(true);
-
+  const [loading, setLoading] = useState(true);  
   function get(url) {
     return new Promise((resolve, reject) => {
       fetch(baseUrl + url)
